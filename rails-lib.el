@@ -268,13 +268,49 @@ else return nil"
   (when (rails/resource-buffer-p rails/current-buffer)
     (eq 'controller (rails/resource-buffer-type rails/current-buffer))))
 
+(defun rails/model-spec? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'model-spec (rails/resource-buffer-type rails/current-buffer))))
+
 (defun rails/controller-spec? ()
   (when (rails/resource-buffer-p rails/current-buffer)
     (eq 'controller-spec (rails/resource-buffer-type rails/current-buffer))))
 
+(defun rails/view-spec? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'view-spec (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/helper-spec? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'helper-spec (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/factory-spec? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'factory-spec (rails/resource-buffer-type rails/current-buffer))))
+
 (defun rails/model? ()
   (when (rails/resource-buffer-p rails/current-buffer)
     (eq 'model (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/unit-test? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'unit-test (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/unit-test-mailer? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'unit-test-mailer (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/functional-test? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'functional-test (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/fixture? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'fixture (rails/resource-buffer-type rails/current-buffer))))
+
+(defun rails/helper? ()
+  (when (rails/resource-buffer-p rails/current-buffer)
+    (eq 'helper (rails/resource-buffer-type rails/current-buffer))))
 
 (defun rails/migration? ()
   (when (rails/resource-buffer-p rails/current-buffer)
